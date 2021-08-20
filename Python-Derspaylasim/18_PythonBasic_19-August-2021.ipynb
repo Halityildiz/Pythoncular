@@ -1,0 +1,1205 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"https://docs.google.com/uc?id=14xeXxFrVRjvOoUYWn_GuyE-v84wVzrqr\" class=\"img-fluid\" alt=\"CLRWY\" width=\"400\" height=\"200\">"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<h1><p style=\"text-align: center; color:darkblue\">Python + In-Class, <br>19 August 2021</p><h1>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- Kendi Module ve Package'lerimizi Oluşturup Kullanalım"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'C:\\\\Users\\\\YD\\\\pythonic\\\\PythonSessions\\\\Cohort-009-PythonSessions'"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "pwd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from upper_package import my_package_1, my_package_2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from upper_package.my_package_1 import my_module_1, my_module_2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['__builtins__',\n",
+       " '__cached__',\n",
+       " '__doc__',\n",
+       " '__file__',\n",
+       " '__loader__',\n",
+       " '__name__',\n",
+       " '__package__',\n",
+       " '__path__',\n",
+       " '__spec__',\n",
+       " 'my_module_1',\n",
+       " 'my_module_2']"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dir(my_package_1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from upper_package.my_package_2 import my_module_3, my_module_4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['__builtins__',\n",
+       " '__cached__',\n",
+       " '__doc__',\n",
+       " '__file__',\n",
+       " '__loader__',\n",
+       " '__name__',\n",
+       " '__package__',\n",
+       " '__path__',\n",
+       " '__spec__',\n",
+       " 'my_module_3',\n",
+       " 'my_module_4']"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dir(my_package_2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2.0"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_module_2.divide(10,5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "9"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_module_1.addition(4,5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'clarusway clarusway clarusway '"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_module_3.repeater(\"clarusway \", 3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3.0"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_module_4.sqroot(9)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "ModuleSpec(name='upper_package.my_package_1', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000018AD9120B00>, origin='C:\\\\Users\\\\YD\\\\pythonic\\\\PythonSessions\\\\Cohort-009-PythonSessions\\\\upper_package\\\\my_package_1\\\\__init__.py', submodule_search_locations=['C:\\\\Users\\\\YD\\\\pythonic\\\\PythonSessions\\\\Cohort-009-PythonSessions\\\\upper_package\\\\my_package_1'])"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_package_1.__spec__"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import upper_package"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['__builtins__',\n",
+       " '__cached__',\n",
+       " '__doc__',\n",
+       " '__file__',\n",
+       " '__loader__',\n",
+       " '__name__',\n",
+       " '__package__',\n",
+       " '__path__',\n",
+       " '__spec__',\n",
+       " 'my_package_1',\n",
+       " 'my_package_2']"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dir(upper_package)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from upper_package.my_package_1.my_module_2 import divide, hello"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "hello\n"
+     ]
+    }
+   ],
+   "source": [
+    "hello()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2.0"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "divide(22,11)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import math"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from math import log10"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4.0"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "log10(10000)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "This module is always available.  It provides access to the\n",
+      "mathematical functions defined by the C standard.\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(math.__doc__)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "This is module 2. Welcome!\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(my_module_2.__doc__)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "pip 20.0.2 from C:\\Users\\YD\\Anaconda3\\lib\\site-packages\\pip (python 3.7)\n",
+      "\n",
+      "Note: you may need to restart the kernel to use updated packages.\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip --version"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Requirement already satisfied: kaggle in c:\\users\\yd\\anaconda3\\lib\\site-packages (1.5.12)Note: you may need to restart the kernel to use updated packages.\n",
+      "Requirement already satisfied: urllib3 in c:\\users\\yd\\anaconda3\\lib\\site-packages (from kaggle) (1.25.8)\n",
+      "Requirement already satisfied: python-dateutil in c:\\users\\yd\\anaconda3\\lib\\site-packages (from kaggle) (2.8.1)\n",
+      "Requirement already satisfied: six>=1.10 in c:\\users\\yd\\anaconda3\\lib\\site-packages (from kaggle) (1.14.0)\n",
+      "Requirement already satisfied: requests in c:\\users\\yd\\anaconda3\\lib\\site-packages (from kaggle) (2.23.0)\n",
+      "Requirement already satisfied: python-slugify in c:\\users\\yd\\anaconda3\\lib\\site-packages (from kaggle) (5.0.2)\n",
+      "Requirement already satisfied: tqdm in c:\\users\\yd\\anaconda3\\lib\\site-packages (from kaggle) (4.46.0)\n",
+      "Requirement already satisfied: certifi in c:\\users\\yd\\anaconda3\\lib\\site-packages (from kaggle) (2020.4.5.1)\n",
+      "Requirement already satisfied: idna<3,>=2.5 in c:\\users\\yd\\anaconda3\\lib\\site-packages (from requests->kaggle) (2.9)\n",
+      "\n",
+      "Requirement already satisfied: chardet<4,>=3.0.2 in c:\\users\\yd\\anaconda3\\lib\\site-packages (from requests->kaggle) (3.0.4)\n",
+      "Requirement already satisfied: text-unidecode>=1.3 in c:\\users\\yd\\anaconda3\\lib\\site-packages (from python-slugify->kaggle) (1.3)\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip install kaggle"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Package                            Version            \n",
+      "---------------------------------- -------------------\n",
+      "absl-py                            0.9.0              \n",
+      "adal                               1.2.6              \n",
+      "alabaster                          0.7.12             \n",
+      "altair                             4.1.0              \n",
+      "anaconda-client                    1.7.2              \n",
+      "anaconda-navigator                 1.9.12             \n",
+      "anaconda-project                   0.8.3              \n",
+      "argh                               0.26.2             \n",
+      "asn1crypto                         1.3.0              \n",
+      "astor                              0.8.1              \n",
+      "astroid                            2.4.0              \n",
+      "astropy                            4.0.1.post1        \n",
+      "atomicwrites                       1.4.0              \n",
+      "attrs                              19.3.0             \n",
+      "autopep8                           1.4.4              \n",
+      "azure-common                       1.1.26             \n",
+      "azure-graphrbac                    0.61.1             \n",
+      "azure-mgmt-authorization           0.61.0             \n",
+      "azure-mgmt-containerregistry       2.8.0              \n",
+      "azure-mgmt-keyvault                2.2.0              \n",
+      "azure-mgmt-resource                12.0.0             \n",
+      "azure-mgmt-storage                 11.2.0             \n",
+      "azureml-core                       1.21.0.post2       \n",
+      "Babel                              2.8.0              \n",
+      "backcall                           0.1.0              \n",
+      "backports.functools-lru-cache      1.6.1              \n",
+      "backports.shutil-get-terminal-size 1.0.0              \n",
+      "backports.tempfile                 1.0                \n",
+      "backports.weakref                  1.0.post1          \n",
+      "base58                             2.0.1              \n",
+      "bcrypt                             3.1.7              \n",
+      "beautifulsoup4                     4.9.0              \n",
+      "bitarray                           1.2.1              \n",
+      "bkcharts                           0.2                \n",
+      "bleach                             3.1.4              \n",
+      "blinker                            1.4                \n",
+      "blis                               0.4.1              \n",
+      "bokeh                              2.0.2              \n",
+      "boto                               2.49.0             \n",
+      "boto3                              1.17.17            \n",
+      "botocore                           1.20.17            \n",
+      "Bottleneck                         1.3.2              \n",
+      "cachetools                         4.1.0              \n",
+      "catalogue                          1.0.0              \n",
+      "certifi                            2020.4.5.1         \n",
+      "cffi                               1.14.0             \n",
+      "chardet                            3.0.4              \n",
+      "click                              7.1.2              \n",
+      "cloudpickle                        1.4.1              \n",
+      "clyent                             1.2.2              \n",
+      "colorama                           0.4.3              \n",
+      "comtypes                           1.1.7              \n",
+      "conda                              4.8.3              \n",
+      "conda-build                        3.18.8             \n",
+      "conda-package-handling             1.7.0              \n",
+      "conda-verify                       3.4.2              \n",
+      "contextlib2                        0.6.0.post1        \n",
+      "cryptography                       2.9.2              \n",
+      "cycler                             0.10.0             \n",
+      "cymem                              2.0.3              \n",
+      "Cython                             0.29.17            \n",
+      "cytoolz                            0.10.1             \n",
+      "dask                               2.16.0             \n",
+      "decorator                          4.4.2              \n",
+      "defusedxml                         0.6.0              \n",
+      "diff-match-patch                   20181111           \n",
+      "distributed                        2.16.0             \n",
+      "docker                             4.4.1              \n",
+      "docutils                           0.15.2             \n",
+      "en-core-web-sm                     2.3.1              \n",
+      "entrypoints                        0.3                \n",
+      "enum-compat                        0.0.3              \n",
+      "et-xmlfile                         1.0.1              \n",
+      "Faker                              6.5.2              \n",
+      "fastcache                          1.1.0              \n",
+      "filelock                           3.0.12             \n",
+      "flake8                             3.7.9              \n",
+      "Flask                              1.1.2              \n",
+      "fsspec                             0.7.1              \n",
+      "future                             0.18.2             \n",
+      "gast                               0.2.2              \n",
+      "gevent                             1.4.0              \n",
+      "gitdb                              4.0.5              \n",
+      "GitPython                          3.1.12             \n",
+      "glob2                              0.7                \n",
+      "google-auth                        1.14.1             \n",
+      "google-auth-oauthlib               0.4.1              \n",
+      "google-pasta                       0.2.0              \n",
+      "greenlet                           0.4.15             \n",
+      "grpcio                             1.28.1             \n",
+      "h5py                               2.10.0             \n",
+      "HeapDict                           1.0.1              \n",
+      "html5lib                           1.0.1              \n",
+      "hypothesis                         5.11.0             \n",
+      "idna                               2.9                \n",
+      "imageio                            2.8.0              \n",
+      "imagesize                          1.2.0              \n",
+      "importlib-metadata                 1.5.0              \n",
+      "intervaltree                       3.0.2              \n",
+      "ipykernel                          5.1.4              \n",
+      "ipython                            7.13.0             \n",
+      "ipython-genutils                   0.2.0              \n",
+      "ipywidgets                         7.5.1              \n",
+      "isodate                            0.6.0              \n",
+      "isort                              4.3.21             \n",
+      "itsdangerous                       1.1.0              \n",
+      "jdcal                              1.4.1              \n",
+      "jedi                               0.15.2             \n",
+      "jeepney                            0.6.0              \n",
+      "Jinja2                             2.11.2             \n",
+      "jmespath                           0.10.0             \n",
+      "joblib                             0.14.1             \n",
+      "json5                              0.9.4              \n",
+      "jsonpickle                         1.5.1              \n",
+      "jsonschema                         3.2.0              \n",
+      "jupyter                            1.0.0              \n",
+      "jupyter-client                     6.1.3              \n",
+      "jupyter-console                    6.1.0              \n",
+      "jupyter-core                       4.6.3              \n",
+      "jupyter-http-over-ws               0.0.8              \n",
+      "jupyterlab                         1.2.6              \n",
+      "jupyterlab-server                  1.1.1              \n",
+      "Keras                              2.3.1              \n",
+      "Keras-Applications                 1.0.8              \n",
+      "Keras-Preprocessing                1.1.0              \n",
+      "keyring                            21.1.1             \n",
+      "kiwisolver                         1.2.0              \n",
+      "lazy-object-proxy                  1.4.3              \n",
+      "libarchive-c                       2.9                \n",
+      "lightgbm                           2.3.1              \n",
+      "llvmlite                           0.32.1             \n",
+      "locket                             0.2.0              \n",
+      "lxml                               4.5.0              \n",
+      "Markdown                           3.2.1              \n",
+      "MarkupSafe                         1.1.1              \n",
+      "matplotlib                         3.1.3              \n",
+      "mccabe                             0.6.1              \n",
+      "menuinst                           1.4.16             \n",
+      "missingno                          0.4.2              \n",
+      "mistune                            0.8.4              \n",
+      "mkl-fft                            1.0.15             \n",
+      "mkl-random                         1.1.0              \n",
+      "mkl-service                        2.3.0              \n",
+      "mock                               4.0.2              \n",
+      "more-itertools                     8.2.0              \n",
+      "mpmath                             1.1.0              \n",
+      "msgpack                            1.0.0              \n",
+      "msrest                             0.6.21             \n",
+      "msrestazure                        0.6.4              \n",
+      "multipledispatch                   0.6.0              \n",
+      "murmurhash                         1.0.2              \n",
+      "mysql-connector-python             8.0.21             \n",
+      "navigator-updater                  0.2.1              \n",
+      "nbconvert                          5.6.1              \n",
+      "nbformat                           5.0.6              \n",
+      "ndg-httpsclient                    0.5.1              \n",
+      "networkx                           2.4                \n",
+      "nltk                               3.4.5              \n",
+      "nose                               1.3.7              \n",
+      "notebook                           6.0.3              \n",
+      "numba                              0.49.1             \n",
+      "numexpr                            2.7.1              \n",
+      "numpy                              1.18.1             \n",
+      "numpydoc                           0.9.2              \n",
+      "oauthlib                           3.1.0              \n",
+      "olefile                            0.46               \n",
+      "openpyxl                           3.0.3              \n",
+      "opt-einsum                         3.2.1              \n",
+      "packaging                          20.3               \n",
+      "pandas                             1.0.3              \n",
+      "pandocfilters                      1.4.2              \n",
+      "paramiko                           2.7.1              \n",
+      "parso                              0.5.2              \n",
+      "partd                              1.1.0              \n",
+      "path                               13.1.0             \n",
+      "pathlib2                           2.3.5              \n",
+      "pathspec                           0.8.1              \n",
+      "pathtools                          0.1.2              \n",
+      "patsy                              0.5.1              \n",
+      "pep8                               1.7.1              \n",
+      "pexpect                            4.8.0              \n",
+      "pickleshare                        0.7.5              \n",
+      "Pillow                             7.1.2              \n",
+      "pip                                20.0.2             \n",
+      "pkginfo                            1.5.0.1            \n",
+      "plac                               1.1.3              \n",
+      "pluggy                             0.13.1             \n",
+      "ply                                3.11               \n",
+      "preshed                            3.0.2              \n",
+      "prometheus-client                  0.7.1              \n",
+      "prompt-toolkit                     3.0.4              \n",
+      "protobuf                           3.11.3             \n",
+      "protobuf3-to-dict                  0.1.5              \n",
+      "psutil                             5.7.0              \n",
+      "py                                 1.8.1              \n",
+      "py4j                               0.10.7             \n",
+      "pyasn1                             0.4.8              \n",
+      "pyasn1-modules                     0.2.8              \n",
+      "pycodestyle                        2.5.0              \n",
+      "pycosat                            0.6.3              \n",
+      "pycparser                          2.20               \n",
+      "pycrypto                           2.6.1              \n",
+      "pycurl                             7.43.0.5           \n",
+      "pydeck                             0.4.0b2            \n",
+      "pydocstyle                         4.0.1              \n",
+      "pyflakes                           2.1.1              \n",
+      "Pygments                           2.6.1              \n",
+      "PyJWT                              1.7.1              \n",
+      "pylint                             2.5.0              \n",
+      "PyNaCl                             1.3.0              \n",
+      "pyodbc                             4.0.0-unsupported  \n",
+      "pyOpenSSL                          19.1.0             \n",
+      "pyparsing                          2.4.7              \n",
+      "pyreadline                         2.1                \n",
+      "pyrsistent                         0.16.0             \n",
+      "PySocks                            1.7.1              \n",
+      "pyspark                            2.4.4              \n",
+      "pytest                             5.4.2              \n",
+      "pytest-arraydiff                   0.3                \n",
+      "pytest-astropy                     0.8.0              \n",
+      "pytest-astropy-header              0.1.2              \n",
+      "pytest-doctestplus                 0.5.0              \n",
+      "pytest-openfiles                   0.5.0              \n",
+      "pytest-remotedata                  0.3.2              \n",
+      "python-dateutil                    2.8.1              \n",
+      "python-jsonrpc-server              0.3.4              \n",
+      "python-language-server             0.31.10            \n",
+      "python-slugify                     5.0.2              \n",
+      "pytz                               2020.1             \n",
+      "PyWavelets                         1.1.1              \n",
+      "pywin32                            227                \n",
+      "pywin32-ctypes                     0.2.0              \n",
+      "pywinpty                           0.5.7              \n",
+      "PyYAML                             5.3.1              \n",
+      "pyzmq                              18.1.1             \n",
+      "QDarkStyle                         2.8.1              \n",
+      "QtAwesome                          0.7.0              \n",
+      "qtconsole                          4.7.4              \n",
+      "QtPy                               1.9.0              \n",
+      "requests                           2.23.0             \n",
+      "requests-oauthlib                  1.3.0              \n",
+      "rope                               0.17.0             \n",
+      "rsa                                4.0                \n",
+      "Rtree                              0.9.4              \n",
+      "ruamel-yaml                        0.15.87            \n",
+      "ruamel.yaml                        0.16.12            \n",
+      "ruamel.yaml.clib                   0.2.2              \n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "s3transfer                         0.3.3              \n",
+      "sagemaker                          2.26.0             \n",
+      "sagemaker-experiments              0.1.28             \n",
+      "scikit-image                       0.16.2             \n",
+      "scikit-learn                       0.22.1             \n",
+      "scipy                              1.4.1              \n",
+      "seaborn                            0.10.1             \n",
+      "SecretStorage                      3.3.0              \n",
+      "Send2Trash                         1.5.0              \n",
+      "setuptools                         46.2.0.post20200511\n",
+      "simplegeneric                      0.8.1              \n",
+      "singledispatch                     3.4.0.3            \n",
+      "six                                1.14.0             \n",
+      "smdebug-rulesconfig                1.0.1              \n",
+      "smmap                              3.0.5              \n",
+      "snowballstemmer                    2.0.0              \n",
+      "sortedcollections                  1.1.2              \n",
+      "sortedcontainers                   2.1.0              \n",
+      "soupsieve                          2.0                \n",
+      "spacy                              2.3.2              \n",
+      "spark-nlp                          2.6.2              \n",
+      "Sphinx                             3.0.3              \n",
+      "sphinxcontrib-applehelp            1.0.2              \n",
+      "sphinxcontrib-devhelp              1.0.2              \n",
+      "sphinxcontrib-htmlhelp             1.0.3              \n",
+      "sphinxcontrib-jsmath               1.0.1              \n",
+      "sphinxcontrib-qthelp               1.0.3              \n",
+      "sphinxcontrib-serializinghtml      1.1.4              \n",
+      "sphinxcontrib-websupport           1.2.1              \n",
+      "spyder                             4.1.1              \n",
+      "spyder-kernels                     1.9.0              \n",
+      "SQLAlchemy                         1.3.16             \n",
+      "srsly                              1.0.2              \n",
+      "statsmodels                        0.11.0             \n",
+      "streamlit                          0.62.0             \n",
+      "sympy                              1.5.1              \n",
+      "tables                             3.6.1              \n",
+      "tblib                              1.6.0              \n",
+      "tensorboard                        2.1.1              \n",
+      "tensorflow                         2.1.0              \n",
+      "tensorflow-estimator               2.1.0              \n",
+      "termcolor                          1.1.0              \n",
+      "terminado                          0.8.3              \n",
+      "testpath                           0.4.4              \n",
+      "text-unidecode                     1.3                \n",
+      "thinc                              7.4.1              \n",
+      "toml                               0.10.0             \n",
+      "toolz                              0.10.0             \n",
+      "tornado                            6.0.4              \n",
+      "tqdm                               4.46.0             \n",
+      "traitlets                          4.3.3              \n",
+      "typed-ast                          1.4.1              \n",
+      "typing-extensions                  3.7.4.1            \n",
+      "tzlocal                            2.1                \n",
+      "ujson                              1.35               \n",
+      "unicodecsv                         0.14.1             \n",
+      "urllib3                            1.25.8             \n",
+      "validators                         0.15.0             \n",
+      "wasabi                             0.7.1              \n",
+      "watchdog                           0.10.2             \n",
+      "wcwidth                            0.1.9              \n",
+      "webencodings                       0.5.1              \n",
+      "websocket-client                   0.57.0             \n",
+      "Werkzeug                           1.0.1              \n",
+      "wget                               3.2                \n",
+      "wheel                              0.34.2             \n",
+      "widgetsnbextension                 3.5.1              \n",
+      "win-inet-pton                      1.1.0              \n",
+      "win-unicode-console                0.5                \n",
+      "wincertstore                       0.2                \n",
+      "wrapt                              1.11.2             \n",
+      "xgboost                            1.1.1              \n",
+      "xlrd                               1.2.0              \n",
+      "XlsxWriter                         1.2.8              \n",
+      "xlwings                            0.19.0             \n",
+      "xlwt                               1.3.0              \n",
+      "xmltodict                          0.12.0             \n",
+      "yapf                               0.28.0             \n",
+      "yellowbrick                        1.1                \n",
+      "zict                               2.0.0              \n",
+      "zipp                               3.1.0              \n"
+     ]
+    }
+   ],
+   "source": [
+    "!pip list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Name: pandasNote: you may need to restart the kernel to use updated packages.\n",
+      "Version: 1.0.3\n",
+      "Summary: Powerful data structures for data analysis, time series, and statistics\n",
+      "Home-page: https://pandas.pydata.org\n",
+      "Author: None\n",
+      "Author-email: None\n",
+      "License: BSD\n",
+      "Location: c:\\users\\yd\\anaconda3\\lib\\site-packages\n",
+      "Requires: numpy, python-dateutil, pytz\n",
+      "Required-by: streamlit, statsmodels, seaborn, altair\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip show pandas"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- A simple Algorithym"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['3', '3', '4', '5', '5', '7', '9', '0', '5', '6', '7', '8']\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 876509755433\n",
+    "print(list(str(n))[::-1])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- Let's define our own Factorial Function using Recursive Method"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def my_factorial(n) :\n",
+    "    sonuc = 1\n",
+    "    for i in range(1, n+1) :\n",
+    "        sonuc *= i\n",
+    "    return sonuc"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 35,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_factorial(0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def my_facto(n) :\n",
+    "    \n",
+    "    if n == 1 or n == 0 :\n",
+    "        return 1\n",
+    "    else :\n",
+    "        return n * my_facto(n - 1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "24"
+      ]
+     },
+     "execution_count": 42,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_facto(4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- Building a Calculator using Dict with Lambda Expression"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "9"
+      ]
+     },
+     "execution_count": 43,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "(lambda x, y : x + y)(4, 5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ops = {\"+\" : (lambda x, y : x + y),\n",
+    "       \"-\" : (lambda x, y : x - y),\n",
+    "       \"/\" : (lambda x, y : x / y),\n",
+    "       \"*\" : (lambda x, y : x * y)}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "8"
+      ]
+     },
+     "execution_count": 49,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ops[\"+\"](3, 5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "bir_dikşinıri = {\"ne_diyorum\" : \"sesimi_duy\",\n",
+    "                 \"neden\" : [\"bilmirem\"]}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'sesimi_duy'"
+      ]
+     },
+     "execution_count": 45,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "bir_dikşinıri[\"ne_diyorum\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "list"
+      ]
+     },
+     "execution_count": 47,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(bir_dikşinıri[\"neden\"])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'ne_diyorum': 'sesimi_duy', 'neden': ['bilmirem']}"
+      ]
+     },
+     "execution_count": 51,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "{x : y for x,y in bir_dikşinıri.items()}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- Nested List Comprehension"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['elma', 'armut', 'muz']"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "xList = \"elma armut muz\".split()\n",
+    "xList"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['selvi', 'vahit', 'ayşe']"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "yList = \"selvi vahit ayşe\".split()\n",
+    "yList"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- Nested list comprehension with ternary if statements"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- Quesiton - given a list `[1,2,3]` get an all possible output combination of these numbers in a list.\n",
+    "\n",
+    "- output= \n",
+    "```\n",
+    "[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
