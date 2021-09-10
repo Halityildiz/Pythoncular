@@ -1,10 +1,5 @@
-Banana
-
-Orange
-
-Apple
-
-Strawberry
-
-Cherry
-
+Jasmine
+Rose
+Lily
+Daisy
+Tulip
